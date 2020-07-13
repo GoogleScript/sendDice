@@ -1,0 +1,23 @@
+// penyederhanaan variable
+    var msg = update.message;
+    var text = msg.text;
+    var chats = msg.chat.id;
+
+// 🎲 Dice - 🏀 Ball - 🎯 Dart
+      if ( /^Dice/i.exec(msg.text) ){
+        return tg.request("sendDice", {chat_id: chats} );
+      }
+
+      if ( /^Ball/i.exec(msg.text) ){
+        return tg.request("sendDice", {chat_id: chats, emoji: "🏀"} );
+      }
+
+      if ( /^Dart/i.exec(msg.text) ){
+        return tg.request("sendDice", {chat_id: chats, emoji: "🎯"} );
+      }
+
+// akhir deteksi pesan text
+
+    }
+  }
+}
